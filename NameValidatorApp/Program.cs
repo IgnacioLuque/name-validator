@@ -1,2 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using NameValidatorApp;
+
+var name = args[0];
+
+var nameValidator = new NameValidator();
+
+var isValidName = nameValidator.IsValidName(name);
+
+Console.WriteLine($"{(isValidName ? "The name given is valid" : "The name given is invalid")}");
